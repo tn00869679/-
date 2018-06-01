@@ -1,0 +1,12 @@
+import twstock
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+stock = twstock.Stock('2330')
+tsmc_array=stock.price[-50:]   # 近五日之收盤價
+#[214.0, 214.5, 215.5, 214.0, 214.5]
+plt.plot(tsmc_array,lw=2)
+#plt.yticks(range(230,270,20))
+plt.show()
+#stock.high[-5:]    # 近五日之盤中高點
+#[214.0, 215.0, 215.5, 215.0, 214.5]
